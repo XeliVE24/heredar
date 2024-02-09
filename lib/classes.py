@@ -8,7 +8,8 @@ class alumno:
         pass
    
     def setCalif(self, calif):
-        self.calificacion.append(calif)
+        self.calif.append(calif)
+        
         return calif
     
     def Setpromedio(self):
