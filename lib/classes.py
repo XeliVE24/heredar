@@ -4,34 +4,46 @@ class alumno:
         self.matricula=matricula
         self.nombre=nombre
         self.edad=edad
+        self.calif= []
         pass
-
-    def Calificaciones(self,cal1=None,cal2=None,cal3=None,cal4=None,cal5=None):
-        self.cal1=cal1
-        self.cal2=cal2
-        self.cal3=cal3
-        self.cal4=cal4
-        self.cal5=cal5
    
-    def  __str__ (self):
-        return f"{self.matricula},{self.nombre},{self.edad},{self.cal1},{self.cal2},{self.cal3},{self.cal4},{self.cal5},{self.promedio},{self.graduado},{self.fecha},{self.tesis}"
-
-    def Promedio(self):
+    def setCalif(self, calif):
+        self.calificacion.append(calif)
+        return calif
+    
+    def Setpromedio(self):
         ZeroDivisionError
         try:
-            self.promedio=((self.cal1+self.cal2+self.cal3+self.cal4+self.cal5)/5)
+            promedio = sum(self.calif)/len(self.calif)
         except Exception as e:
-         print(f"error desconocido:{e}")
-    
-        return
-    
-    def Graduado(self):
-        if self.promedio >= 6:
-            return "si"
-        else:
-            return "n/a"
-    
+            print(f"error desconocido:{e}")
+        return promedio
+   
+    def  __str__ (self):
+        return f"{self.matricula},{self.nombre},{self.edad},{self.calif},{self.promedio}"
 
+    #  .............heredar................
+
+class alumnograduado(alumno):
+    def __init__(self, matricula, nombre, edad, graduado,fecha, tesis):
+        super().__init__(matricula, nombre, edad)
+        self.graduado = graduado
+        self.fecha = fecha
+        self.tesis = tesis
+        pass
+    def chkGrad(self):
+        promedio = self.promedio()
+        if promedio <= 6:
+            print("\033[31m si \033[0m")
+        else:
+            print( "n/a")
+        pass
+
+    
+#--..-----imprimir parte 2 -----
+   # def printalum(alumnograduado):
+    #print(f"Nombre Completo:{self.nombre} edad:{self.edad} matricula:{self.matricula} graduado el:{self.fecha}con Tesis:{self.tesis}")
+    #return 
         
  
 
