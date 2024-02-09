@@ -1,10 +1,11 @@
 class alumno:
 
-    def __init__(self ,matricula,nombre,edad,):
+    def __init__(self ,matricula,nombre,edad):
         self.matricula=matricula
         self.nombre=nombre
         self.edad=edad
         self.calif= []
+    
         pass
    
     def setCalif(self, calif):
@@ -17,7 +18,7 @@ class alumno:
         try:
             promedio = sum(self.calif)/len (self.calif)
         except Exception as e:
-            print(f"error desconocido:{e}")
+            print(f"error desconocido:{e}") 
         return promedio
    
     #def  __str__ (self):
@@ -49,6 +50,6 @@ class alumnograduado(alumno):
    # def printalum(alumnograduado):
     #print(f"Nombre Completo:{self.nombre} edad:{self.edad} matricula:{self.matricula} graduado el:{self.fecha}con Tesis:{self.tesis}")
     #return 
-        
+
  
 
