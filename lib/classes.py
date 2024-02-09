@@ -14,7 +14,8 @@ class alumno:
         
         return calif
     
-    def Setpromedio(self):
+    def Setpromedio(self,promedio):
+        self.promedio(promedio)
 
         ZeroDivisionError
         try:
@@ -45,33 +46,22 @@ class alumnograduado(alumno):
 
 
     def chkGrad(self):
-        promedio = self.promedio()
+        Setpromedio = self.promedio()
 
-        if promedio <= 6:
+        if Setpromedio <= 6:
             graduado = "No"
         else:
             graduado = "Si"
         return graduado
     
-    def chckFecha(self):
-        promedio = self.promedio()
-        
-        fecha = ""
-        if promedio <= 5.9:
-            fecha = "N/A"
-        else:
-            fecha = self.fecha
-        
-        return fecha
+    
    
     def  __str__ (self):
-       return f"{self.matricula}| {self.nombre}|{self.edad}   |{self.calif} ||{self.graduado}    |{self.fecha}      |{self.tesis}"
+       return f"{self.matricula}| {self.nombre}|{self.edad}   |{self.calif} |   |{self.graduado}    |{self.fecha}      |{self.tesis}"
     
 
+
 #--..-----imprimir parte 2 -----
-   # def printalum(alumnograduado):
-    #print(f"Nombre Completo:{self.nombre} edad:{self.edad} matricula:{self.matricula} graduado el:{self.fecha}con Tesis:{self.tesis}")
-    #return 
 
  
 

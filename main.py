@@ -15,7 +15,7 @@ alum2.setCalif(5)
 alum2.setCalif(5)
 alum2.setCalif(4)
 alum2.setCalif(3)
-alum2.set_graduado("No","N/A","N/A")
+alum2.set_graduado
 #print(alum2)
 
 alum3 = alumnograduado( 100738, "Víctor García", 20)
@@ -24,7 +24,7 @@ alum3.setCalif(3)
 alum3.setCalif(4)
 alum3.setCalif(5)
 alum3.setCalif(4)
-alum3.set_graduado("No","N/A","N/A")
+alum3.set_graduado
 #print(alum3)
 
 
@@ -58,7 +58,7 @@ alum6.setCalif(5)
 alum6.setCalif(4)
 alum6.setCalif(4)
 alum6.setCalif(3)
-alum6.set_graduado("No",	"N/A",	"N/A")
+alum6.set_graduado
 
 
 
@@ -68,7 +68,8 @@ alum7.setCalif(6)
 alum7.setCalif(10)
 alum7.setCalif(9)
 alum7.setCalif(8)
-alum7.set_graduado("No",	"N/A",	"N/A")
+
+alum7.set_graduado("Si",	"01/08/2026", "La telenovela Mirada de mujer como fenomeno social ")
 #print(alum7)
 
 
@@ -78,25 +79,54 @@ alum8.setCalif(5)
 alum8.setCalif(7)
 alum8.setCalif(8)
 alum8.setCalif(9)
-alum8.set_graduado("Si"	,"01/08/2026"	," La telenovela Mirada de mujer como fenomeno social" )
+alum8.set_graduado("si","	01/12/2026"	," Como influyen los corridos tumbados en la sociedad" )
 #print(alum8)
 
-print("ALUMNOS UTECA")
-print("                               CALIFICACIONES                                         ")
-print ("Matri |Nombre       |Ed| 1 | 2 | 3 | 4 | 5 | promedio |Graduado|Fecha  |Tesis")
-print ("..................................................................................................................................")
+print("")
+print("\033[46m Calificaciones de los estudiantes de actuaria UTECA  \033[0m")
+print("")
+print("                                  |  Calificaciones  |")
+print("Mat | Nombre        |Edad| 1  | 2 | 3  | 4  | 5 |Final|Grad?| Fecha      | Tesis")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum1)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum2)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum3)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum4)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum5)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum6)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum7)
-print ("..................................................................................................................................")
+print("-------------------------------------------------------------------------------------------------------------------------------------")
 print(alum8)
+
+
+print("")
+print("\033[46m Datos de los estudiantes de actuaria UTECA\033[0m")
+
+
+print("Matricula:" + str (alum1.matricula)+" " "Nombre Completo:"+ str (alum1.nombre)+ " " "Edad:"+str (alum1.edad)+" ""Graduado el:"+str (alum1.fecha)+" " "Con la Tesis:"+str(alum1.tesis))
+
+print("Matricula:" + str (alum2.matricula)+" " "Nombre Completo:"+ str (alum2.nombre)+ " " "Edad:"+str (alum2.edad)+" ""NO graduado")
+
+print("Matricula:" + str (alum3.matricula)+" " "Nombre Completo:"+ str (alum3.nombre)+ " " "Edad:"+str (alum3.edad)+" ""No Graduado ")
+
+print("Matricula:" + str (alum4.matricula)+" " "Nombre Completo:"+ str (alum4.nombre)+ " " "Edad:"+str (alum4.edad)+" ""Graduado el:"+str (alum4.fecha)+" " "Con la Tesis:"+str(alum4.tesis))
+
+print("Matricula:" + str (alum5.matricula)+" " "Nombre Completo:"+ str (alum5.nombre)+ " " "Edad:"+str (alum5.edad)+" ""Graduado el:"+str (alum5.fecha)+" " "Con la Tesis:"+str(alum5.tesis))
+
+
+print("Matricula:" + str (alum6.matricula)+" " "Nombre Completo:"+ str (alum6.nombre)+ " " "Edad:"+str (alum6.edad)+" ""NO graduado")
+
+print("Matricula:" + str (alum7.matricula)+" " "Nombre Completo:"+ str (alum7.nombre)+ " " "Edad:"+str (alum7.edad)+" ""Graduado el:"+str (alum7.fecha)+" " "Con la Tesis:"+str(alum7.tesis))
+
+print("Matricula:" + str (alum8.matricula)+" " "Nombre Completo:"+ str (alum8.nombre)+ " " "Edad:"+str (alum8.edad)+" ""Graduado el:"+str (alum8.fecha)+" " "Con la Tesis:"+str(alum8.tesis))
+
+
+ 
+
+
