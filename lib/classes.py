@@ -15,31 +15,35 @@ class alumno:
     def Setpromedio(self):
         ZeroDivisionError
         try:
-            promedio = sum(self.calif)/len(self.calif)
+            promedio = sum(self.calif)/len (self.calif)
         except Exception as e:
             print(f"error desconocido:{e}")
         return promedio
    
-    def  __str__ (self):
-        return f"{self.matricula},{self.nombre},{self.edad},{self.calif},{self.promedio}"
+    #def  __str__ (self):
+    #   return f"{self.matricula}|{self.nombre}|{self.edad}|{self.calif}|{self.promedio}"
 
     #  .............heredar................
 
 class alumnograduado(alumno):
-    def __init__(self, matricula, nombre, edad, graduado,fecha, tesis):
+    def __init__(self, matricula, nombre, edad, graduado=None,fecha=None , tesis=None):
         super().__init__(matricula, nombre, edad)
         self.graduado = graduado
         self.fecha = fecha
         self.tesis = tesis
         pass
-    def chkGrad(self):
-        promedio = self.promedio()
-        if promedio <= 6:
-            print("\033[31m si \033[0m")
-        else:
-            print( "n/a")
-        pass
+    #def  __str__ (self):
+       # return f"{self.matricula}|{self.nombre}|{self.edad}|{self.calif}|{self.promedio}|{self.graduado}|{self.fecha}|{self.tesis}"
+    
 
+    def chkGrad(self):
+        Setpromedio = self.promedio()
+        return Setpromedio >= 6.0
+
+    def set_graduado(self,graduado, fecha,tesis):
+        self.graduado=graduado
+        self.fecha = fecha
+        self.tesis = tesis
     
 #--..-----imprimir parte 2 -----
    # def printalum(alumnograduado):
